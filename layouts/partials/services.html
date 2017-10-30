@@ -1,0 +1,29 @@
+<section id="services">
+  <div class="content-section-a">
+    <h1 class="text-center">Services</h1>
+    <hr class="intro-divider">
+    <div class="container">
+      <div class="row">
+        {{ range $index, $element :=  .Data.Pages }}
+          {{ if eq .Section "services" }}
+            <div class="col-lg-6">
+              <div class="clearfix"></div>
+              <div>
+                <h3 class="text-center section-heading">{{ .Title }}</h3>
+                  {{ .Content }}
+                  {{ with .Params.img }}
+                    <img class="img-responsive" src="img/{{ . }}" alt="">
+                  {{ end }}
+              </div>
+              {{ with .Params.details }}
+                <div style="padding-top:40px">
+                  <p class="text-center"><a href="{{.}}" class="btn btn-default">Read more</a></p>
+                </div>
+              {{ end }}
+            </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

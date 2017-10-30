@@ -1,0 +1,23 @@
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3">{{if isset .Site.Params "github"}}<a href="{{.Site.Params.github}}" target="_blank">Github</a>{{end}}</div>
+        <div class="col-lg-6"></div>
+          <div class="col-lg-3" id="contact">
+            <div class="clearfix"></div>
+              <ul class="list-unstyled">
+                {{if isset .Site.Params "name"}}<li>{{.Site.Params.name}}</li>{{end}}
+                {{if isset .Site.Params "address1"}}<li>{{.Site.Params.address1}}</li>{{end}}
+                {{if isset .Site.Params "address2"}}<li>{{.Site.Params.address2}}</li>{{end}}
+                {{if isset .Site.Params "address3"}}<li>{{.Site.Params.address3}}</li>{{end}}
+                {{if isset .Site.Params "country"}}<li>{{.Site.Params.country}}</li>{{end}}
+                <hr>
+                {{if isset .Site.Params "contact"}}<li><a href="{{.Site.Params.contact}}" class="btn btn-default">Read more</a></li>{{end}}
+              </ul>
+          </div>
+      </div>
+    </div>
+  </footer>
+  {{ partial "js.html" . }}
+</body>
+</html>

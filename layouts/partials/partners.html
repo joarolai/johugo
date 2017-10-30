@@ -1,0 +1,20 @@
+{{ if isset .Site.Params "partner" }}
+<section id="partners">
+  <div class="content-section-b">
+    <h1 class="text-center">Partners</h1>
+    <hr class="intro-divider">
+    <div class="container">
+      <div class="row">
+        {{ range .Site.Params.partner }}
+            <div class="col-lg-3" class="text-center">
+              <div class="clearfix"></div>
+                <div style="padding-bottom:50px;padding-top:50px" class="text-center">
+                  <a href="{{.url}}" target="_blank"><img style="display:block;margin-left:auto;margin-right:auto;height:50px" class="img-responsive text-center" src="img/partners/{{ .logo }}" alt="{{.name}}"></a>
+                </div>
+            </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
