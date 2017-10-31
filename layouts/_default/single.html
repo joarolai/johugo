@@ -1,6 +1,17 @@
 {{ partial "head.html" . }}
 {{ partial "nav.html" . }}
-<br>
-<br>
-<br>
-{{ .Title }}
+
+<section id="services">
+  <div class="content-section-b">
+    <h1 class="text-center">{{ .Title }}</h1>
+    <hr class="intro-divider">
+    <div class="container">
+      <div class="row">
+        {{.Content}}
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{{ partial "footer.html" . }}

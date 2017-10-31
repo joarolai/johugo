@@ -1,7 +1,82 @@
 {{ partial "head.html" . }}
 {{ partial "nav.html" . }}
-<br>
-<br>
-<br>
-Hei
-{{.Content}}
+
+<section id="services">
+  <div class="content-section-b">
+    <h1 style="margin-bottom:80px" class="text-center">{{ .Title }}</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div class="clearfix"></div>
+            <figure>
+              {{ with .Params.img }}
+                <img style="margin-left:auto;margin-right:auto;display:block" class="img-responsive" src="img/{{ . }}" alt="">
+              {{ end }}
+              {{ with .Params.caption }}
+                <figcaption style="margin:20px" class="text-center">{{ . }}</figcaption>
+              {{end}}
+            </figure>
+        </div>
+        <div class="col-lg-5">
+          <div class="clearfix"></div>
+            {{.Content}}
+        </div>
+      </div>
+  </div>
+</section>
+
+{{ range $index, $element :=  .Data.Pages }}
+  {{ if modBool $index 2 }}
+    <section id="services">
+      <div class="content-section-b">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="clearfix"></div>
+                <h3 class="text-center">{{ .Title }}</h3>
+                <hr>
+                {{.Content}}
+            </div>
+            <div class="col-lg-4">
+              <div class="clearfix"></div>
+                <figure>
+                  {{ with .Params.img }}
+                    <img style="margin-left:auto;margin-right:auto;display:block" class="img-responsive" src="img/{{ . }}" alt="">
+                  {{ end }}
+                  {{ with .Params.caption }}
+                    <figcaption style="margin:20px" class="text-center">{{ . }}</figcaption>
+                  {{end}}
+                </figure>
+            </div>
+          </div>
+      </div>
+    </section>
+  {{ else }}
+    <section id="services">
+      <div class="content-section-b">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="clearfix"></div>
+              <h3 class="text-center">{{ .Title }}</h3>
+              <hr>
+              {{.Content}}
+            </div>
+            <div class="col-lg-4">
+              <div class="clearfix"></div>
+                <figure>
+                  {{ with .Params.img }}
+                    <img style="margin-left:auto;margin-right:auto;display:block" class="img-responsive" src="img/{{ . }}" alt="">
+                  {{ end }}
+                  {{ with .Params.caption }}
+                    <figcaption style="margin:20px" class="text-center">{{ . }}</figcaption>
+                  {{end}}
+                </figure>
+            </div>
+          </div>
+      </div>
+    </section>
+  {{ end}}
+{{ end }}
+
+{{ partial "footer.html" . }}
