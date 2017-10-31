@@ -11,9 +11,11 @@
               <div>
                 <h3 class="text-center section-heading">{{ .Title }}</h3>
                   {{ .Content }}
+                  {{with .Params.details}}<a href="{{.}}">{{ end}}
                   {{ with .Params.img }}
                     <img class="img-responsive" src="img/{{ . }}" alt="">
                   {{ end }}
+                  {{with .Params.details}}</a>{{ end}}
               </div>
               {{ with .Params.details }}
                 <div style="padding-top:40px">
