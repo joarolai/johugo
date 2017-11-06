@@ -1,16 +1,22 @@
-<section id="intro">
-	<div class="intro-header simple-hover">
-	    <div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="intro-message">
+{{ range where .Data.Pages "Section" "intro" | first 1 }}
+	<section id="intro">
+		{{ with .Params.details }}
+			<a href="{{.}}">
+		{{ end }}
+			<div class="intro-header simple-hover">
+			    <div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="intro-message">
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-	    </div>
-	</div>
+			    </div>
+			</div>
+		{{ with .Params.details }}
+			</a>
+		{{ end }}
 
-	{{ range where .Data.Pages "Section" "intro" | first 1 }}
 		<div class="content-section-b">
 			<div class="row">
 				<div class="col-lg-12">
@@ -25,5 +31,5 @@
 				</div>
 			</div>
 		</div>
-	{{ end }}
-</section>
+	</section>
+{{ end }}
