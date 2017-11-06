@@ -74,18 +74,23 @@ h6 {
 }
 
 .content-section-a {
-    padding: 50px;
+    padding: 10px;
+    padding-top:50px;
+    padding-bottom:50px;
     background-color: #f8f8f8;
 }
 
 .content-section-b {
-    padding: 50px;
+    padding-top:50px;
+    padding: 10px;
+    padding-top:50px;
+    padding-bottom:50px;
     border-top: 1px solid #e7e7e7;
     border-bottom: 1px solid #e7e7e7;
 }
 
 footer {
-    padding: 50px;
+    padding: 10px;
     background-color: black;
     color:#cfcfcf;
 }
@@ -117,7 +122,6 @@ nav {
   box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
 }
 
-
 .btn {
     background-color: transparent;
     color:black;
@@ -143,11 +147,19 @@ nav {
     color:black;
 }
 
+.trapezoid {
+  height: 500px;
+}
+
+.trapezoid-content {
+  padding:20px;
+  height:inherit;
+}
+
 @media (min-width: 768px) {
   .trapezoid {
-    height: 0;
     width: 400px;
-    border-bottom: 400px solid rgba(0,0,0,0.8);
+    border-bottom: 500px solid rgba(0,0,0,0.8);
     border-left: 0px solid transparent;
     border-right: 100px solid transparent;
   }
@@ -160,16 +172,22 @@ nav {
 
 @media (max-width: 767px) {
   .trapezoid {
-    height: 400px;
-    border-bottom: 200px solid rgba(0,0,0,0.8);
+    border-bottom: 250px solid rgba(0,0,0,0.8);
   }
 
   .trap-content {
-     padding-bottom:10px;
+     padding-bottom:0px;
   }
 
   .trap-heading {
-    padding-top:180px;
+    padding-top:230px;
+  }
+}
 
+
+@media (max-width: 400px) {
+  #navbar-title {
+    visibility: hidden;
+    font-size:0pt;
   }
 }

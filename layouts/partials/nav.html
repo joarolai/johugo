@@ -8,10 +8,10 @@
         <span class="icon-bar"></span>
       </button>
       <a class="page-scroll navbar-brand"
-        {{if isset .Site.Params "logo"}}
-          style="padding-left:60px; background:url('img/{{.Site.Params.logo}}') no-repeat;background-size: 45px"
-        {{ end }}
-        href="">{{ .Site.Title }}</a>
+        style="{{if isset .Site.Params "logo"}}
+          padding-left:60px; background:url('img/{{.Site.Params.logo}}') no-repeat;background-size: 45px;
+              {{ end }} overflow:hidden"
+        href=""><span id="navbar-title">{{ .Site.Title }}</span></a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
