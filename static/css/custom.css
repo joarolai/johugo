@@ -199,3 +199,49 @@ nav {
     font-size:0pt;
   }
 }
+
+.partners {
+  padding:20px;
+  text-align: center;
+}
+
+@media (min-width: 450px) {
+  .partners {
+    display:inline-block;
+    float:left;
+    width:50%
+  }
+}
+
+@media (min-width: 1000px) {
+  .partners {
+    display:inline-block;
+    float:left;
+    width:25%
+  }
+}
+
+.partners a {
+  font-size: 18pt;
+  color:rgb(51, 51, 51);
+  padding:10px;
+}
+
+.partners a:hover {
+  color:rgb(51, 51, 51);
+  text-decoration: none;
+}
+
+.partners span {
+  padding:10px;
+}
+
+.partners img {
+  height:20px;
+}
+
+@media (min-width: 600px) {
+  .partners img {
+    height:30px;
+  }
+}
