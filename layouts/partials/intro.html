@@ -1,5 +1,5 @@
 {{ range where .Data.Pages "Section" "intro" | first 1 }}
-	<section id="intro">
+	<section style="padding-top:40px">
 		{{ with .Params.details }}
 			<a href="{{.}}">
 		{{ end }}

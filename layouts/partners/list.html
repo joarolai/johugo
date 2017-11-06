@@ -1,31 +1,24 @@
 {{ partial "head.html" . }}
 {{ partial "nav.html" . }}
 
-<section id="services">
-  <div class="content-section-b">
+  <section style="padding-top:100px">
     <h1 style="margin-bottom:80px" class="text-center">Our Partners</h1>
-  </div>
-</section>
-
-    <section id="services">
-        <div class="content-section-b">
-        <div class="container">
-          <div class="row">
-            {{ range $index, $element :=  .Data.Pages }}
-            <div class="col-lg-4" style="padding:40px">
-              <div class="clearfix"></div>
-                {{ with .Params.img }}
-                  <img style="height:50px;margin-left:auto;margin-right:auto;display:block" class="img-responsive" src="img/{{ . }}" alt="">
-                {{ end }}
-                <hr>
-                <div>
-                  {{.Content}}
-                </div>
+    <div class="container">
+      <div class="row">
+        {{ range $index, $element :=  .Data.Pages }}
+          <div class="col-lg-4" style="padding:40px">
+            <div class="clearfix"></div>
+              {{ with .Params.img }}
+                <img style="height:50px;margin-left:auto;margin-right:auto;display:block" class="img-responsive" src="img/{{ . }}" alt="">
+              {{ end }}
+            <hr>
+            <div>
+              {{.Content}}
             </div>
-            {{ end }}
-
           </div>
+        {{ end }}
       </div>
-    </section>
+    </div>
+  </section>
 
 {{ partial "footer.html" . }}
