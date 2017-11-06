@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
+  <div class="container" style="padding:0px">
     <div class="navbar-header page-scroll">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
@@ -7,14 +7,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="page-scroll navbar-brand"
-        style="{{if isset .Site.Params "logo"}}
-          padding-left:60px; background:url('img/{{.Site.Params.logo}}') no-repeat;background-size: 45px;
-              {{ end }} overflow:hidden"
-        href=""><span id="navbar-title">{{ .Site.Title }}</span></a>
+      <div style="padding-left:20px;padding-right:20px">
+        <a class="page-scroll navbar-brand"
+          style="{{if isset .Site.Params "logo"}}
+            padding-left:60px; background:url('img/{{.Site.Params.logo}}') no-repeat;background-size: 45px;
+                {{ end }} overflow:hidden"
+                href="">
+                <span id="navbar-title">{{ .Site.Title }}</span>
+        </a>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
+    <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right mymenu">
         {{ range .Site.Params.menu }}
           <li><a href="{{.url}}">{{.name}}</a></li>
         {{ end }}
