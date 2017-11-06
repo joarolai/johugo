@@ -6,8 +6,9 @@
       <div class="row">
         {{ range $index, $element :=  .Data.Pages }}
           {{ if eq .Section "partners" }}
-            <div class="col-lg-3">
-              <div class="clearfix"></div>
+            {{ if eq .Params.front true }}
+              <div class="col-lg-3">
+                <div class="clearfix"></div>
                 <div style="padding-bottom:50px;padding-top:50px" class="text-center">
                   <a href="{{.Params.link}}" target="_blank">
                       <img  style="display:block;margin-left:auto;margin-right:auto;height:50px"
@@ -16,7 +17,8 @@
                             alt="{{.Params.title}}">
                   </a>
                 </div>
-            </div>
+              </div>
+          {{ end }}
         {{ end }}
       {{ end }}
       </div>
