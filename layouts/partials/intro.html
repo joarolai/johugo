@@ -1,35 +1,24 @@
 {{ range where .Data.Pages "Section" "intro" | first 1 }}
-	<section style="padding-top:40px">
-		{{ with .Params.details }}
-			<a href="{{.}}">
-		{{ end }}
-			<div class="intro-header simple-hover">
-			    <div class="container">
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="intro-message">
+<section style="padding-top:50px">
+  <div class="content-section-b">
+    <div class="container">
+      <div class="row">
+            <div class="intro-header" style="padding:0px">
+							<div class="trapezoid">
+								<div style="padding:15px;padding-top:20px">
+	                <h3 class="text-center section-heading trap-heading">{{ .Title }}</h3>
+									<div class="trap-content">
+	                  {{ .Content }}
+									</div>
+									{{ with .Params.details }}
+		                  <p class="text-center"><a href="{{.}}" class="btn btn_inverted btn-default">Learn more</a></p>
+		              {{ end }}
 								</div>
 							</div>
-						</div>
-			    </div>
-			</div>
-		{{ with .Params.details }}
-			</a>
-		{{ end }}
+            </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-		<div class="content-section-b">
-			<div class="row">
-				<div class="col-lg-12">
-					<div style="padding-top:40px;padding-bottom:40px;font-size:15pt" class="text-center">
-					{{ .Content }}
-					</div>
-					{{ with .Params.details }}
-					<div style="padding-bottom:40px">
-						<p class="text-center"><a href="{{.}}" class="btn btn-default">Read more</a></p>
-					</div>
-					{{ end }}
-				</div>
-			</div>
-		</div>
-	</section>
 {{ end }}
