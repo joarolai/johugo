@@ -148,11 +148,12 @@ nav {
 }
 
 .trapezoid {
-  height: 500px;
+  height: 400px;
 }
 
 .trapezoid-content {
-  padding:20px;
+  padding:10px;
+  padding-top:0px;
   height:inherit;
 }
 
@@ -175,7 +176,7 @@ nav {
 
 @media (max-width: 767px) {
   .trapezoid {
-    border-bottom: 250px solid rgba(0,0,0,0.8);
+    border-bottom: 200px solid rgba(0,0,0,0.8);
   }
 
   .trap-content {
@@ -197,6 +198,10 @@ nav {
   #navbar-title {
     visibility: hidden;
     font-size:0pt;
+  }
+
+  .trap-heading {
+    padding-top:210px;
   }
 }
 
