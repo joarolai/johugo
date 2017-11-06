@@ -17,8 +17,8 @@
         </a>
       </div>
     </div>
-    <div class="navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right mymenu">
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
         {{ range .Site.Params.menu }}
           <li><a href="{{.url}}">{{.name}}</a></li>
         {{ end }}
