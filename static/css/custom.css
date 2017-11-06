@@ -36,10 +36,20 @@ h6 {
     padding-bottom: 15%;
 }
 
+.simple-hover {
+  filter:brightness(70%)
+}
+
+.simple-hover:hover {
+  filter:brightness(100%);
+}
+
+
 .intro-message > h1 {
     margin: 0;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
     font-size: 5em;
+    filter:brightness(200%)
 }
 
 .intro-divider {
@@ -98,4 +108,9 @@ footer a:focus {
 nav a:focus {
     outline:0;
     text-decoration: none;
+}
+
+nav {
+  height:60px;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.25);
 }
