@@ -24,11 +24,11 @@
               <hr>
               <h4>Company Address:</h4>
               <ul class="list-unstyled" style="padding-bottom:20px;padding-left:10px">
-                {{ with .Param "company.name"}}<li>{{.}}</li>{{ end }}
-                {{ with .Param "company.address1"}}<li>{{.}}</li>{{ end }}
-                {{ with .Param "company.address2"}}<li>{{.}}</li>{{ end }}
-                {{ with .Param "company.address3"}}<li>{{.}}</li>{{ end }}
-                {{ with .Param "company.country"}}<li>{{.}}</li>{{ end }}
+                {{ with .Site.Params.name}}<li>{{.}}</li>{{ end }}
+                {{ with .Site.Params.address1}}<li>{{.}}</li>{{ end }}
+                {{ with .Site.Params.address2}}<li>{{.}}</li>{{ end }}
+                {{ with .Site.Params.address3}}<li>{{.}}</li>{{ end }}
+                {{ with .Site.Params.country}}<li>{{.}}</li>{{ end }}
                 <br>
                 {{ with .Param "company.email"}}<li><img src="img/email.svg" style="width:15px"><span style="padding:10px"><a href="mailto:{{.}}">{{.}}</a></li>{{ end }}
                 {{ with .Param "company.tlf"}}<li>{{.}}</li>{{ end }}
