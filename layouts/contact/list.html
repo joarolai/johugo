@@ -1,0 +1,62 @@
+{{ partial "head.html" . }}
+{{ partial "nav.html" . }}
+  <section style="padding-top:50px">
+    <div class="content-section-b">
+      <h1 style="margin-bottom:80px" class="text-center">{{.Title}}</h1>
+      <div class="container">
+        <div class="row">
+          {{ range where .Data.Pages "Section" "contact" | first 1 }}
+            <div class="col-lg-5" style="padding:40px">
+              <div class="clearfix"></div>
+              <h4>Managing director:</h4>
+              <ul class="list-unstyled"  style="padding-bottom:20px;padding-left:10px">
+                {{ with .Param "manager.name"}}<li>{{.}}</li>{{ end }}
+                {{ with .Param "manager.address1"}}<li>{{.}}</li>{{ end }}
+                {{ with .Param "manager.address2"}}<li>{{.}}</li>{{ end }}
+                {{ with .Param "manager.address3"}}<li>{{.}}</li>{{ end }}
+                {{ with .Param "manager.country"}}<li>{{.}}</li>{{ end }}
+                <br>
+                {{ with .Param "manager.email"}}<li><img src="img/email.svg" style="width:15px"><a href="mailto:{{.}}"><span style="padding:10px">{{.}}<span></a></li>{{ end }}
+                {{ with .Param "manager.tlf"}}<li><img src="img/phone.svg" style="width:15px"><span style="padding:10px">{{.}}<span></li>{{ end }}
+                {{ with .Param "manager.facebook"}}<li><img src="img/facebook.svg" style="width:15px"><span style="padding:10px"><a href="{{.}}">Facebook</a></li>{{ end }}
+                {{ with .Param "manager.linkedin"}}<li><img src="img/in.svg" style="width:15px"><span style="padding:10px"><a href="{{.}}">LinkedIn</a></li>{{ end }}
+              </ul>
+              <hr>
+              <h4>Company Address:</h4>
+              <ul class="list-unstyled" style="padding-bottom:20px;padding-left:10px">
+                {{ with .Param "company.name"}}<li>{{.}}</li>{{ end }}
+                {{ with .Param "company.address1"}}<li>{{.}}</li>{{ end }}
+                {{ with .Param "company.address2"}}<li>{{.}}</li>{{ end }}
+                {{ with .Param "company.address3"}}<li>{{.}}</li>{{ end }}
+                {{ with .Param "company.country"}}<li>{{.}}</li>{{ end }}
+                <br>
+                {{ with .Param "company.email"}}<li><img src="img/email.svg" style="width:15px"><span style="padding:10px"><a href="mailto:{{.}}">{{.}}</a></li>{{ end }}
+                {{ with .Param "company.tlf"}}<li>{{.}}</li>{{ end }}
+                {{ with .Param "company.facebook"}}<li><img src="img/facebook.svg" style="width:15px"><span style="padding:10px"><a href="{{.}}">Facebook</a></li>{{ end }}
+                {{ with .Param "company.linkedin"}}<li><img src="img/in.svg" style="width:15px"><span style="padding:10px"><a href="{{.}}">LinkedIn</a></li>{{ end }}
+              </ul>
+
+            </div>
+            <div class="col-lg-4" style="padding:40px">
+              <div class="clearfix"></div>
+                {{with .Param "company.map"}}
+                  <div class="mapouter">
+                    <div class="gmap_canvas">
+                      <iframe width="600" height="500" id="gmap_canvas"
+                        src="{{.}}"
+                        frameborder="0"
+                        scrolling="no"
+                        marginheight="0"
+                        marginwidth="0">
+                      </iframe>
+                    </div>
+                  </div>
+                {{end}}
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+{{ partial "footer.html" . }}

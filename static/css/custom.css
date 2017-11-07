@@ -233,11 +233,18 @@ nav {
 }
 
 .partners img {
-  height:20px;
+  height:30px;
 }
 
-@media (min-width: 600px) {
-  .partners img {
-    height:30px;
-  }
+
+.mapouter {
+  overflow:hidden;
+  height:500px;
+  width:600px;
 }
+
+.gmap_canvas {
+  background:none!important;
+  height:500px;
+  width:600px;
+  }

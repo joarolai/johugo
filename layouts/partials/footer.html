@@ -1,24 +1,28 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-lg-3" style="padding-bottom:20px">
-          {{if isset .Site.Params "github"}}
-            <a href="{{.Site.Params.github}}" target="_blank" style="padding-bottom:20px;"><img style="width:20px" src="img/github.jpg"></a>
-          {{end}}
-        </div>
-        <div class="col-lg-6"></div>
-          <div class="col-lg-3" id="contact">
-            <div class="clearfix"></div>
-              <ul class="list-unstyled">
-                {{if isset .Site.Params "name"}}<li>{{.Site.Params.name}}</li>{{end}}
-                {{if isset .Site.Params "address1"}}<li>{{.Site.Params.address1}}</li>{{end}}
-                {{if isset .Site.Params "address2"}}<li>{{.Site.Params.address2}}</li>{{end}}
-                {{if isset .Site.Params "address3"}}<li>{{.Site.Params.address3}}</li>{{end}}
-                {{if isset .Site.Params "country"}}<li>{{.Site.Params.country}}</li>{{end}}
-                <hr>
-                {{if isset .Site.Params "details"}}<li><a href="{{.Site.Params.details}}" class="btn btn-default">Read more</a></li>{{end}}
+        {{ range where .Data.Pages "Section" "contact" | first 1 }}
+          <div class="col-lg-3" style="padding-bottom:20px">
+            {{with .Param "company.github"}}
+              <a href="{{.}}" target="_blank" style="padding-bottom:20px;"><img style="width:20px" src="img/github.jpg"></a>
+            {{end}}
+          </div>
+          <div class="col-lg-6"></div>
+            <div class="col-lg-3" id="contact">
+              <div class="clearfix"></div>
+                <ul class="list-unstyled">
+                  {{with .Param "company.name"}}<li>{{.}}</li>{{end}}
+                  {{with .Param "company.address1"}}<li>{{.}}</li>{{end}}
+                  {{with .Param "company.address2"}}<li>{{.}}</li>{{end}}
+                  {{with .Param "company.address3"}}<li>{{.}}</li>{{end}}
+                  {{with .Param "company.country"}}<li>{{.}}</li>{{end}}
+                  {{with .Params.details}}
+                    <hr>
+                    <li><a href="{{.}}" class="btn btn-default btn_inverted">Read more</a></li>
+                  {{end}}
               </ul>
           </div>
+        {{ end }}
       </div>
     </div>
   </footer>
