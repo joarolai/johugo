@@ -1,7 +1,11 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-lg-3">{{if isset .Site.Params "github"}}<a href="{{.Site.Params.github}}" target="_blank">Github</a>{{end}}</div>
+        <div class="col-lg-3" style="padding-bottom:20px">
+          {{if isset .Site.Params "github"}}
+            <a href="{{.Site.Params.github}}" target="_blank" style="padding-bottom:20px;"><img style="width:20px" src="img/github.jpg"></a>
+          {{end}}
+        </div>
         <div class="col-lg-6"></div>
           <div class="col-lg-3" id="contact">
             <div class="clearfix"></div>
