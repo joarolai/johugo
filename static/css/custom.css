@@ -239,10 +239,10 @@ nav {
 .map {
   background:none!important;
   height:500px;
-  width:400px;
+  width:250px;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 1000px) {
   .map {
     background:none!important;
     width:600px;
