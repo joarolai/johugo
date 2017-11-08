@@ -1,12 +1,12 @@
 {{ partial "head.html" . }}
 {{ partial "nav.html" . }}
-  <section style="padding-top:50px">
+  <section style="padding-top:40px">
     <div class="content-section-b">
-      <h1 style="margin-bottom:80px" class="text-center">{{.Title}}</h1>
+      <h1 style="margin-bottom:20px" class="text-center">{{.Title}}</h1>
       <div class="container">
         <div class="row">
           {{ range where .Data.Pages "Section" "contact" | first 1 }}
-            <div class="col-lg-5" style="padding:40px">
+            <div class="col-lg-4">
               <div class="clearfix"></div>
               <h4>Managing director:</h4>
               <ul class="list-unstyled"  style="padding-bottom:20px;padding-left:10px">
@@ -35,18 +35,19 @@
                 {{ with .Param "company.facebook"}}<li><img src="img/facebook.svg" style="width:15px"><span style="padding:10px"><a href="{{.}}">Facebook</a></li>{{ end }}
                 {{ with .Param "company.linkedin"}}<li><img src="img/in.svg" style="width:15px"><span style="padding:10px"><a href="{{.}}">LinkedIn</a></li>{{ end }}
               </ul>
-
             </div>
-            <div class="col-lg-4" style="padding:40px">
+            <div class="col-lg-8">
               <div class="clearfix"></div>
                 {{with .Param "company.map"}}
-                    <iframe class="map"
+                  <div class="map">
+                    <iframe
                       src="{{.}}"
                       frameborder="0"
                       scrolling="no"
                       marginheight="0"
                       marginwidth="0">
                     </iframe>
+                  </div>
                 {{end}}
             </div>
           {{ end }}
