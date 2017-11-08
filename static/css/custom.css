@@ -184,10 +184,9 @@ nav {
   }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 1000px) {
   #navbar-title {
-    visibility: hidden;
-    font-size:0pt;
+    display: none;
   }
 
   .trap-heading {
