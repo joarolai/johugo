@@ -150,7 +150,7 @@ nav {
 @media (min-width: 768px) {
   .trapezoid {
     width: 400px;
-    border-bottom: 500px solid rgba(0,0,0,0.8);
+    border-bottom: 500px solid rgba(0,0,0,0.5);
     border-left: 0px solid transparent;
     border-right: 100px solid transparent;
   }
@@ -166,11 +166,11 @@ nav {
 
 @media (max-width: 767px) {
   .trapezoid {
-    border-bottom: 200px solid rgba(0,0,0,0.8);
+    border-bottom: 0px solid rgba(0,0,0,0.8);
   }
 
   .trap-content {
-     padding-bottom:10px;
+     padding:10px;
   }
 
   .trap-heading {
@@ -190,7 +190,7 @@ nav {
   }
 
   .trap-heading {
-    padding-top:210px;
+    padding-top:100px;
   }
 }
 
