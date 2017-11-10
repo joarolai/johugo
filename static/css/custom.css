@@ -24,8 +24,8 @@ h6 {
 }
 
 .intro-header {
-    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 50px;
+    height:600px;
+    padding:0px;
     text-align: center;
     color: #f8f8f8;
 }
@@ -150,7 +150,7 @@ nav {
 @media (min-width: 768px) {
   .trapezoid {
     width: 400px;
-    border-bottom: 500px solid rgba(0,0,0,0.5);
+    border-bottom: 600px solid rgba(0,0,0,0.5);
     border-left: 0px solid transparent;
     border-right: 100px solid transparent;
   }
@@ -168,6 +168,7 @@ nav {
   .trapezoid {
     border-bottom: 0px solid rgba(0,0,0,0.8);
   }
+
 
   .trap-content {
      padding:10px;
