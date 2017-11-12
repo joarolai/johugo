@@ -1,6 +1,6 @@
 {{ range where .Data.Pages "Section" "intro" | first 1 }}
-<section style="padding-top:50px">
-  <div class="content-section-a">
+<section style="padding:0px">
+  <div class="content-section-a" style="padding:0px">
     <div class="container">
       <div class="row">
         <div class="intro-header"
@@ -8,7 +8,7 @@
             background:url('img/{{.}}') no-repeat center center; background-size: cover;
           {{ end }}">
           <div class="trapezoid">
-            <div class="trapezoid-content">
+            <div class="trapezoid-inner">
               <h3 class="text-center section-heading trap-heading">{{ .Title }}</h3>
               <div class="trap-content">
                 {{ .Content }}

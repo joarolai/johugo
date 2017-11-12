@@ -24,10 +24,17 @@ h6 {
 }
 
 .intro-header {
-    height:600px;
+    height:500px;
     padding:0px;
     text-align: center;
     color: #f8f8f8;
+}
+
+
+@media (min-width: 768px) {
+  .intro-header {
+      height:700px;
+  }
 }
 
 .intro-message {
@@ -141,7 +148,7 @@ nav {
   height: 400px;
 }
 
-.trapezoid-content {
+.trapezoid-inner {
   padding:10px;
   padding-top:0px;
   height:inherit;
@@ -150,17 +157,17 @@ nav {
 @media (min-width: 768px) {
   .trapezoid {
     width: 400px;
-    border-bottom: 600px solid rgba(0,0,0,0.5);
+    border-bottom: 700px solid rgba(0,0,0,0.5);
     border-left: 0px solid transparent;
     border-right: 100px solid transparent;
   }
   .trap-heading {
-    padding-top:100px;
+    padding-top:200px;
   }
 
   .trap-content {
-     padding-top:40px;
-     padding-bottom:20px;
+     padding-top:50px;
+     padding-bottom:50px;
   }
 }
 
@@ -169,13 +176,12 @@ nav {
     border-bottom: 0px solid rgba(0,0,0,0.8);
   }
 
-
   .trap-content {
      padding:10px;
   }
 
   .trap-heading {
-    padding-top:230px;
+    padding-top:150px;
   }
 
   .nav{
@@ -188,10 +194,6 @@ nav {
 @media (max-width: 1000px) {
   #navbar-title {
     display: none;
-  }
-
-  .trap-heading {
-    padding-top:100px;
   }
 }
 
