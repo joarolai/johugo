@@ -15,11 +15,12 @@
                 {{ with .Param "manager.address2"}}<li>{{.}}</li>{{ end }}
                 {{ with .Param "manager.address3"}}<li>{{.}}</li>{{ end }}
                 {{ with .Param "manager.country"}}<li>{{.}}</li>{{ end }}
-                <br>
-                {{ with .Param "manager.email"}}<li><img src="img/email.svg" style="width:15px"><a href="mailto:{{.}}"><span style="padding:10px">{{.}}<span></a></li>{{ end }}
-                {{ with .Param "manager.tlf"}}<li><img src="img/phone.svg" style="width:15px"><span style="padding:10px">{{.}}<span></li>{{ end }}
-                {{ with .Param "manager.facebook"}}<li><img src="img/facebook.svg" style="width:15px"><span style="padding:10px"><a href="{{.}}">Facebook</a></li>{{ end }}
-                {{ with .Param "manager.linkedin"}}<li><img src="img/in.svg" style="width:15px"><span style="padding:10px"><a href="{{.}}">LinkedIn</a></li>{{ end }}
+              </ul>
+              <ul class="list-unstyled"  style="padding-bottom:20px;padding-left:10px">
+                {{ with .Param "manager.email"}}<li><img src="img/email.svg" style="width:15px" alt="E-mail"><a href="mailto:{{.}}"><span style="padding:10px">{{.}}</span></a></li>{{ end }}
+                {{ with .Param "manager.tlf"}}<li><img src="img/phone.svg" style="width:15px" alt="Phone"><span style="padding:10px">{{.}}</span></li>{{ end }}
+                {{ with .Param "manager.facebook"}}<li><img src="img/facebook.svg" style="width:15px" alt="Facebook"><span style="padding:10px"><a href="{{.}}">Facebook</a></span></li>{{ end }}
+                {{ with .Param "manager.linkedin"}}<li><img src="img/in.svg" style="width:15px" alt="LinkedIn"><span style="padding:10px"><a href="{{.}}">LinkedIn</a></span></li>{{ end }}
               </ul>
               <hr>
               <h4>Company Address:</h4>
@@ -29,24 +30,19 @@
                 {{ with .Site.Params.address2}}<li>{{.}}</li>{{ end }}
                 {{ with .Site.Params.address3}}<li>{{.}}</li>{{ end }}
                 {{ with .Site.Params.country}}<li>{{.}}</li>{{ end }}
-                <br>
-                {{ with .Param "company.email"}}<li><img src="img/email.svg" style="width:15px"><span style="padding:10px"><a href="mailto:{{.}}">{{.}}</a></li>{{ end }}
-                {{ with .Param "company.tlf"}}<li>{{.}}</li>{{ end }}
-                {{ with .Param "company.facebook"}}<li><img src="img/facebook.svg" style="width:15px"><span style="padding:10px"><a href="{{.}}">Facebook</a></li>{{ end }}
-                {{ with .Param "company.linkedin"}}<li><img src="img/in.svg" style="width:15px"><span style="padding:10px"><a href="{{.}}">LinkedIn</a></li>{{ end }}
+              </ul>
+              <ul class="list-unstyled"  style="padding-bottom:20px;padding-left:10px">
+                {{ with .Param "company.email"}}<li><img src="img/email.svg" style="width:15px" alt="E-mail"><span style="padding:10px"><a href="mailto:{{.}}">{{.}}</a></span></li>{{ end }}
+                {{ with .Param "company.tlf"}}<li><img src="img/phone.svg" style="width:15px" alt="Phone"><span style="padding:10px">{{.}}</span></li>{{ end }}
+                {{ with .Param "company.facebook"}}<li><img src="img/facebook.svg" style="width:15px" alt="Facebook"><span style="padding:10px"><a href="{{.}}">Facebook</a></span></li>{{ end }}
+                {{ with .Param "company.linkedin"}}<li><img src="img/in.svg" style="width:15px" alt="LinkedIn"><span style="padding:10px"><a href="{{.}}">LinkedIn</a></span></li>{{ end }}
               </ul>
             </div>
             <div class="col-lg-8">
               <div class="clearfix"></div>
                 {{with .Param "company.map"}}
                   <div class="map">
-                    <iframe
-                      src="{{.}}"
-                      frameborder="0"
-                      scrolling="no"
-                      marginheight="0"
-                      marginwidth="0">
-                    </iframe>
+                    <iframe src="{{.}}" style="border:0px;"></iframe>
                   </div>
                 {{end}}
             </div>
