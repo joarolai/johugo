@@ -18,11 +18,12 @@
             </figure>
         </div>
       </div>
+    </div>
   </div>
 </section>
 
 {{ range $index, $element :=  .Data.Pages }}
-    <section id="services">
+    <section>
       {{ if modBool $index 2 }}
         <div class="content-section-a">
       {{ else }}
@@ -56,6 +57,7 @@
               {{end}}
             </div>
           </div>
+        </div>
       </div>
     </section>
 {{ end }}
