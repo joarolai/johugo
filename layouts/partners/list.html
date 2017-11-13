@@ -9,8 +9,9 @@
           {{ range $index, $element :=  .Data.Pages }}
             <div class="col-lg-4 partner-frame">
               <div class="clearfix"></div>
+                {{ $title := .Params.title }}
                 {{ with .Params.img }}
-                  <img class="img-responsive" src="img/{{ . }}" alt="">
+                  <img class="img-responsive" src="img/{{ . }}" alt="{{ $title }}">
                 {{ end }}
               <hr>
               <div>
@@ -33,6 +34,7 @@
               {{.Content}}
           </div>
         </div>
+      </div>
     </div>
   </section>
 
